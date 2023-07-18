@@ -4,7 +4,7 @@ name: Run JMH Benchmarks for Pull Request
 on:
   issue_comment: # This workflow triggers when a comment is created
     types: [created]
-
+concurrency: benchmarking
 jobs:
   benchmarking:
     # Only run this job if a comment on a pull request contains '/benchmark' and is a PR on the uber/NullAway repository
