@@ -39,7 +39,7 @@ jobs:
       uses: google-github-actions/setup-gcloud@v1
       
     - name: Start VM
-      run: gcloud compute instances start nullway-jmh --zone=us-central1-a
+      run: gcloud compute instances start instance-1 --zone=us-central1-a
       
     - name: Run benchmarks 
       run: |
@@ -64,7 +64,7 @@ jobs:
         message-id: benchmark
     - name: Stop VM
       if: always()
-      run: gcloud compute instances stop nullway-jmh --zone=us-central1-a
+      run: gcloud compute instances stop instance-1 --zone=us-central1-a
 
       
 
