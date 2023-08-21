@@ -8,7 +8,7 @@ chmod +x ./.github/workflows/gcloud_ssh.sh
 
 # Using gcloud compute scp to copy the bash scripts that will run the benchmarks onto the GCCE
 gcloud compute scp ./.github/workflows/run_pr_benchmarks.sh root@instance-1:"$BRANCH_NAME/" --zone=us-central1-a
-gcloud compute scp ./.github/workflows/run_main_benchmarks.sh root@ninstance-1:"$BRANCH_NAME/" --zone=us-central1-a
+gcloud compute scp ./.github/workflows/run_main_benchmarks.sh root@instance-1:"$BRANCH_NAME/" --zone=us-central1-a
 
 # Running the benchmark script for the pull request branch and main branch on GCCE
 ./.github/workflows/gcloud_ssh.sh " export BRANCH_NAME=${BRANCH_NAME} && export REPO_NAME=${REPO_FULL_NAME} && chmod +x $BRANCH_NAME/run_pr_benchmarks.sh && $BRANCH_NAME/run_pr_benchmarks.sh && cd && chmod +x $BRANCH_NAME/run_main_benchmarks.sh && $BRANCH_NAME/run_main_benchmarks.sh"
