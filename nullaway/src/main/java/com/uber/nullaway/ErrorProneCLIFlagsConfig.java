@@ -282,7 +282,7 @@ final class ErrorProneCLIFlagsConfig extends AbstractConfig {
     return ImmutableSet.copyOf(combined);
   }
 
-
+  @SuppressWarnings("UnusedMethod")
   private static ImmutableSet<String> getFlagStringSet2(ErrorProneFlags flags, String flagName) {
     Optional<String> flagValue = flags.get(flagName);
     if (flagValue.isPresent()) {
@@ -290,6 +290,8 @@ final class ErrorProneCLIFlagsConfig extends AbstractConfig {
     }
     return ImmutableSet.of();
   }
+
+  @SuppressWarnings("UnusedMethod")
   private static ImmutableSet<String> getFlagStringSet3(ErrorProneFlags flags, String flagName) {
     Optional<String> flagValue = flags.get(flagName);
     if (flagValue.isPresent()) {
@@ -297,6 +299,8 @@ final class ErrorProneCLIFlagsConfig extends AbstractConfig {
     }
     return ImmutableSet.of();
   }
+
+  @SuppressWarnings("UnusedMethod")
   private static ImmutableSet<String> getFlagStringSet4(ErrorProneFlags flags, String flagName) {
     Optional<String> flagValue = flags.get(flagName);
     if (flagValue.isPresent()) {
@@ -304,6 +308,8 @@ final class ErrorProneCLIFlagsConfig extends AbstractConfig {
     }
     return ImmutableSet.of();
   }
+
+  @SuppressWarnings("UnusedMethod")
   private static ImmutableSet<String> getFlagStringSet5(ErrorProneFlags flags, String flagName) {
     Optional<String> flagValue = flags.get(flagName);
     if (flagValue.isPresent()) {
@@ -311,6 +317,8 @@ final class ErrorProneCLIFlagsConfig extends AbstractConfig {
     }
     return ImmutableSet.of();
   }
+
+  @SuppressWarnings("UnusedMethod")
   private static ImmutableSet<String> getFlagStringSet6(ErrorProneFlags flags, String flagName) {
     Optional<String> flagValue = flags.get(flagName);
     if (flagValue.isPresent()) {
@@ -318,6 +326,8 @@ final class ErrorProneCLIFlagsConfig extends AbstractConfig {
     }
     return ImmutableSet.of();
   }
+
+  @SuppressWarnings("UnusedMethod")
   private static ImmutableSet<String> getFlagStringSet7(ErrorProneFlags flags, String flagName) {
     Optional<String> flagValue = flags.get(flagName);
     if (flagValue.isPresent()) {
