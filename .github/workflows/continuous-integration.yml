@@ -55,8 +55,8 @@ jobs:
           arguments: build
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
         #if: runner.os == 'Linux' && matrix.java == '11' && matrix.epVersion == '2.20.0' && github.repository == 'uber/NullAway'
       - name: Test publishToMavenLocal flow
         env:
