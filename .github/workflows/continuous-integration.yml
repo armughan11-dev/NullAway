@@ -61,9 +61,6 @@ jobs:
           arguments: codeCoverageReport
         continue-on-error: true
         if: runner.os == 'Linux' && matrix.java == '11' && matrix.epVersion == '2.20.0' #&& github.repository == 'uber/NullAway'
-      - name: List generated reports
-        run: ls -l ./code-coverage-report/build/reports/jacoco/codeCoverageReport/
-        if: runner.os == 'Linux' && matrix.java == '11' && matrix.epVersion == '2.20.0'
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
