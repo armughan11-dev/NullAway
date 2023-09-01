@@ -37,6 +37,10 @@ import java.util.Set;
  */
 final class ErrorProneCLIFlagsConfig extends AbstractConfig {
 
+  public void coverageTestMethod() {
+        System.out.println("Coverage test method invoked!");
+  }
+
   private static final String BASENAME_REGEX = ".*/([^/]+)\\.[ja]ar$";
 
   static final String EP_FL_NAMESPACE = "NullAway";
