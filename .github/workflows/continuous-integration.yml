@@ -64,7 +64,7 @@ jobs:
         env:
           ORG_GRADLE_PROJECT_epApiVersion: ${{ matrix.epVersion }}
         with:
-          arguments: codeCoverageReport 
+          arguments: :code-coverage-report:clean codeCoverageReport --no-build-cache 
         continue-on-error: true
         if: runner.os == 'Linux' && matrix.java == '11' && matrix.epVersion == '2.21.1' #&& github.repository == 'uber/NullAway'
       - name: Upload coverage reports to Codecov
